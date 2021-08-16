@@ -73,7 +73,6 @@ const nameExist = (name) => {
 app.post('/api/persons', (request, response) => {
     const body = request.body
 
-
     if (!body.name || !body.number || nameExist(body.name)) {
         return response.status(400).json({
             error: 'name must be unique'
